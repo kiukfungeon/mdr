@@ -201,3 +201,7 @@ assets = [
 [package.metadata.generate-rpm.requires]
 "libGL.so.1()(64bit)" = "*"
 "libEGL.so.1()(64bit)" = "*"
+
+[profile.release]
+lto = true
+strip = true
