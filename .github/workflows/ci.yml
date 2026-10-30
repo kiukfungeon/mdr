@@ -1,6 +1,9 @@
 name: CI
 
 on:
+
+permissions:
+  contents: read
   push:
     branches: [main, master]
   pull_request:
@@ -135,3 +138,7 @@ jobs:
 
       - name: Test
         run: cargo test --all-features
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
