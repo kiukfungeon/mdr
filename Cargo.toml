@@ -69,7 +69,7 @@ kdl = "6"
 # has no `save` — and the feature stored the window geometry and egui's memory
 # in one file shared by every document, so a window opened at the size, the
 # place and the scroll offset the *previous* document had been left at.
-eframe = { version = "0.36", optional = true }
+eframe = { version = "0.37", optional = true }
 # No `load-images`: it is `egui_extras/image` + `egui_extras/file`, and that
 # file loader reads any path the document names, straight off disk, without
 # passing through mdr's own resolver — so an image refused for being outside the
