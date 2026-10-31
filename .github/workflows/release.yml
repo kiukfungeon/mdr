@@ -78,7 +78,7 @@ jobs:
           Compress-Archive -Path "target/${{ matrix.target }}/release/${{ matrix.binary }}", "target/${{ matrix.target }}/release/LICENSE" -DestinationPath "${{ matrix.archive }}"
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: ${{ matrix.archive }}
           path: ${{ matrix.archive }}
@@ -125,7 +125,7 @@ jobs:
           done
 
       - name: Upload .deb artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: mdr-deb-${{ matrix.arch }}
           path: target/debian/*.deb
@@ -176,7 +176,7 @@ jobs:
           done
 
       - name: Upload .rpm artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: mdr-rpm-${{ matrix.arch }}
           path: target/generate-rpm/*.rpm
