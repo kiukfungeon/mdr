@@ -53,7 +53,7 @@ clap = { version = "4", features = ["derive"] }
 # `syntect-onig` rather than `syntect`: from 0.53 comrak stopped enabling a regex
 # engine for syntect on its own, and a webview-only build (where the terminal
 # backend's own syntect dependency is absent) would no longer link.
-comrak = { version = "0.55", default-features = false, features = [
+comrak = { version = "0.59", default-features = false, features = [
   "syntect-onig",
 ] }
 notify = "8"
